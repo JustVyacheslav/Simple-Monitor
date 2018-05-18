@@ -1,0 +1,125 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d" Height="350" Width="600" Topmost="False" Title="Simple Monitor">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+            <Setter Property="Margin" Value="5,0,5,0"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"></ColumnDefinition>
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel x:Name="st"  VerticalAlignment="Center" Grid.Column="0"  Margin="0,0,1,0">
+            <Button  
+                Margin="5,5,5,0"
+                Height="50" 
+                Command="{Binding ShowMain}" 
+                CommandParameter="{Binding MainSelected}"
+                Background="{Binding MainSelected}"
+                Content="MainIfo">
+            </Button>
+            <Button 
+                Height="50"  
+                Name="BtCpu"
+                Command="{Binding ShowCpu}" 
+                CommandParameter="{Binding CpuSelected}"
+                Background="{Binding CpuSelected}">
+                <Grid Width="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="CPU" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding l}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,5,0"></TextBlock>
+                    <TextBlock Text="{Binding h}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="5,0,0,0"/>
+                </Grid>
+            </Button>
+            <Button  
+                Height="50" 
+                Command="{Binding ShowRam}" 
+                CommandParameter="{Binding RamSelected}"
+                Background="{Binding RamSelected}">
+
+                <Grid Width="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="RAM" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding rl}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,5,0"></TextBlock>
+                    <TextBlock Text="{Binding ra}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="5,0,0,0"/>
+                </Grid>
+            </Button>
+            
+            <Button 
+                Margin="5,0,5,5"
+                Height="50"  
+                Command="{Binding ShowGpu}" 
+                CommandParameter="{Binding GpuSelected}"
+                Background="{Binding GpuSelected}">
+                <Grid Width="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="GPU" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding gl}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,5,0"></TextBlock>
+                    <TextBlock Text="{Binding gt}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="5,0,0,0"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <Line X1="130" Y1="0" X2="130" Y2="2000" Stroke="Gray" />
+        <Frame 
+            x:Name="MainFrame" Grid.Column="1" 
+            Content="{Binding CurrentPage}"
+            NavigationUIVisibility="Hidden"
+            Margin="5,0,0,0" Width="auto"/>
+        <Label x:Name="label" HorizontalAlignment="Left" Margin="55,36,0,0" VerticalAlignment="Top"/>
+
+        <tb:TaskbarIcon MenuActivation="LeftOrRightClick" Visibility="Visible" x:Name="SoMeIcon" ToolTipText="Simple Monitor" IconSource="/Images/Logo.ico">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem
+                        Command="{Binding ShowPropartyWindow}" 
+                              Header="Property" Background="LightBlue" 
+                              BorderBrush="Gold"
+                              Width="auto"
+                              HorizontalAlignment="Left">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/her.png" Stretch="Uniform" StretchDirection="Both" />
+                        </MenuItem.Icon>
+
+                    </MenuItem>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+
+
+    </Grid>
+</Window>

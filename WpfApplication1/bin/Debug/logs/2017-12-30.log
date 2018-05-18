@@ -1,0 +1,8 @@
+2017-12-30 10:11:43.8269 INFO      CPU [ T: 31 °C  , L: 0%   ] RAM [ L: 33 %  , A: 5456 MB ] GPU [ C: 135 MHz  , T: 30 °C  ]
+2017-12-30 10:11:53.8585 INFO      CPU [ T: 31 °C  , L: 2%   ] RAM [ L: 33 %  , A: 5455 MB ] GPU [ C: 135 MHz  , T: 29 °C  ]
+2017-12-30 10:26:58.2548 INFO      CPU [ T: 30 °C  , L: 8%   ] RAM [ L: 32 %  , A: 5500 MB ] GPU [ C: 135 MHz  , T: 28 °C  ]
+2017-12-30 10:27:08.3051 INFO      CPU [ T: 29 °C  , L: 10%  ] RAM [ L: 32 %  , A: 5499 MB ] GPU [ C: 135 MHz  , T: 28 °C  ]
+2017-12-30 10:27:18.3078 INFO      CPU [ T: 30 °C  , L: 6%   ] RAM [ L: 32 %  , A: 5498 MB ] GPU [ C: 135 MHz  , T: 28 °C  ]
+2017-12-30 10:27:28.3386 INFO      CPU [ T: 29 °C  , L: 7%   ] RAM [ L: 32 %  , A: 5499 MB ] GPU [ C: 135 MHz  , T: 28 °C  ]
+2017-12-30 10:27:38.3694 INFO      CPU [ T: 30 °C  , L: 0%   ] RAM [ L: 32 %  , A: 5499 MB ] GPU [ C: 135 MHz  , T: 28 °C  ]
+2017-12-30 10:27:49.7728 INFO      CPU [ T: 30 °C  , L: 3%   ] RAM [ L: 32 %  , A: 5501 MB ] GPU [ C: 135 MHz  , T: 29 °C  ]

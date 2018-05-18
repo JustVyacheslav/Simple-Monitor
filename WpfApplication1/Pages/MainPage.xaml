@@ -1,0 +1,24 @@
+﻿<Page x:Class="WpfApplication1.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="400"
+      Title="MainPage">
+
+    <Grid x:Name="GridTree">
+        <TreeView x:Name="treeView" HorizontalContentAlignment="{Binding ElementName=GridTree, Path=Width}" VerticalAlignment="Top" BorderThickness="0"  Margin="20,20,0,0">
+            <TreeViewItem  x:Name="UserName" IsExpanded="True">
+                <TreeViewItem Header="MotherBoard" x:Name="motherboard" HorizontalAlignment="Left" Width="auto" IsExpanded="True"/>
+                <TreeViewItem Header="Processor" x:Name="proc" HorizontalAlignment="Left" Width="auto" IsExpanded="True"/>
+                <TreeViewItem Header="Memory" x:Name="memory" HorizontalAlignment="Left" Width="auto" IsExpanded="True"/>
+                <TreeViewItem Header="Video Adapter" x:Name="gpuu" HorizontalAlignment="Left" Width="auto" IsExpanded="True"/>
+            </TreeViewItem>
+
+        </TreeView>
+
+
+    </Grid>
+</Page>

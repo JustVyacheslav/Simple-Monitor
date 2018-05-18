@@ -1,0 +1,4 @@
+2018-05-18 15:06:25.3525 INFO      CPU [ T: 34 °C  , L: 3%   ] RAM [ L: 53 %  , A: 3840 MB ] GPU [ C: 135 MHz  , T: 33 °C  ]
+2018-05-18 15:06:35.3846 INFO      CPU [ T: 34 °C  , L: 2%   ] RAM [ L: 53 %  , A: 3840 MB ] GPU [ C: 135 MHz  , T: 33 °C  ]
+2018-05-18 15:06:45.3997 INFO      CPU [ T: 35 °C  , L: 1%   ] RAM [ L: 53 %  , A: 3839 MB ] GPU [ C: 135 MHz  , T: 33 °C  ]
+2018-05-18 15:06:55.3997 INFO      CPU [ T: 35 °C  , L: 5%   ] RAM [ L: 53 %  , A: 3841 MB ] GPU [ C: 135 MHz  , T: 33 °C  ]
